@@ -1,0 +1,55 @@
+# Canonical funded-program archetypes distilled from 2026 online research.
+# Sources (accessed Oct 2026): FTMO Maximum Loss 10% static / 5% daily;
+# Topstep 50K MLL $2,000 EOD-trailing locking at start; Apex EOD/intraday trailing
+# locking at start+$100; Tradeify/MyFundedFutures 3% EOD-trailing; FPFX/Finance
+# Magnates dataset (300k accounts: ~14% pass, ~7% ever paid, avg payout ~4% nominal);
+# Topstep 2025 disclosure (16.8% combines passed, 51.8% persons ever funded,
+# 33.3% funded paid); HyroTrader dashboard (13.49% 1-step / 8.70% 2-step).
+# These are ARCHETYPES for research, not any single firm's live terms.
+# Always re-check the firm's own help-centre before buying.
+programs:
+  two_step_static:
+    label: "Two-Step (FTMO-like, static 10% / daily 5%)"
+    nominal: 100000
+    max_loss_type: "static"
+    max_loss_pct: 0.10
+    daily_loss_pct: 0.05
+    daily_basis: "equity_or_balance_higher"
+    profit_target_phase1_pct: 0.08
+    profit_target_phase2_pct: 0.05
+    min_trading_days: 4
+    consistency_max_best_day_pct: 0.50
+    fee_usd: 500
+    payout_split: 0.80
+    notes: "Abdullah's preferred model: teaches discipline + money management."
+
+  one_step_trailing_eod:
+    label: "One-Step (EOD-trailing, harder target)"
+    nominal: 100000
+    max_loss_type: "trailing_eod"
+    max_loss_pct: 0.06
+    daily_loss_pct: 0.03
+    daily_basis: "equity_or_balance_higher"
+    profit_target_phase1_pct: 0.10
+    profit_target_phase2_pct: 0.0
+    min_trading_days: 3
+    consistency_max_best_day_pct: 0.50
+    fee_usd: 600
+    payout_split: 0.80
+    trailing_lock_at_start: true
+
+  instant_trailing:
+    label: "Instant (no eval, tight trailing, payout from day one)"
+    nominal: 100000
+    max_loss_type: "trailing_eod"
+    max_loss_pct: 0.05
+    daily_loss_pct: 0.03
+    daily_basis: "equity_or_balance_higher"
+    profit_target_phase1_pct: 0.0
+    profit_target_phase2_pct: 0.0
+    min_trading_days: 0
+    consistency_max_best_day_pct: 0.40
+    fee_usd: 900
+    payout_split: 0.70
+    trailing_lock_at_start: true
+    notes: "60%-discount trap: tiny buffer, best-day rule, payout-delay rules."

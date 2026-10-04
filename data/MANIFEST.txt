@@ -1,0 +1,4 @@
+SPY rows=2200 2018-01-02->2026-10-02 source=cache:local sha16=c9cad4fef7b13baf path=/home/md/src/funded-accounts-truth-benchmark-2026/data/SPY.csv
+QQQ rows=2200 2018-01-02->2026-10-02 source=cache:local sha16=2a94da00a624b034 path=/home/md/src/funded-accounts-truth-benchmark-2026/data/QQQ.csv
+GLD rows=2200 2018-01-02->2026-10-02 source=cache:local sha16=b42f8a6691c973d0 path=/home/md/src/funded-accounts-truth-benchmark-2026/data/GLD.csv
+EURUSD rows=2279 2018-01-01->2026-10-02 source=cache:local sha16=a7ba418075ad887a path=/home/md/src/funded-accounts-truth-benchmark-2026/data/EURUSD.csv

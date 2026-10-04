@@ -1,0 +1,15 @@
+services:
+  research:
+    build: .
+    volumes:
+      - ./results:/work/results
+      - ./data:/work/data
+    environment:
+      - PYTHONPATH=/work
+      - TZ=UTC
+    command: python -m src.experiments.run_all
+  test:
+    build: .
+    environment:
+      - PYTHONPATH=/work
+    command: pytest -q
