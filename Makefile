@@ -1,4 +1,4 @@
-.PHONY: install test e1 e2 e3 e4 e5 e6 e7 e8 e9 all live docker-build docker-run docker-test
+.PHONY: install test e1 e2 e3 e4 e5 e6 e7 e8 e9 all live media docker-build docker-run docker-test
 
 install:
 	pip install -r requirements.txt
@@ -20,6 +20,9 @@ all:
 	PYTHONPATH=. python -m src.experiments.run_all
 
 live: all
+
+media:
+	PYTHONPATH=. python -m src.experiments.make_media
 
 docker-build:
 	docker compose build
